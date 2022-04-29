@@ -59,10 +59,7 @@ public class BrowseScreen : MonoBehaviour
         UserDesc.text = stonker.Desc;
         UserNetWorth.text = stonker.Networth;
         UserCompanies.text = stonker.Companies;
-
-        if (!string.IsNullOrEmpty(stonker.Photo)) {
-            UserProfilePic.sprite = stonker.GetSprite();
-        }
+        UserProfilePic.sprite = stonker.GetSprite();
 
         foreach (Transform child in TagContainer) {
             Destroy(child.gameObject);

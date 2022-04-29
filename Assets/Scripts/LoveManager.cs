@@ -23,7 +23,7 @@ public class LoveManager : MonoBehaviour
         PlayerTags = new List<TagData>();
         foreach (var tag in Stonkers.SelectMany(s => s.Tags)) {
             if (!PlayerTags.Any(t => t.Name == tag.Name)) {
-                var emptyTag = new TagData(tag.Name, tag.Icon);
+                var emptyTag = new TagData(tag.Name);
                 PlayerTags.Add(emptyTag);
             }
         }

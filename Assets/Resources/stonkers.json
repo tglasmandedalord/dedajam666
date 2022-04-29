@@ -20,7 +20,6 @@
             "Companies": "Tesla, SpaceX",
             "Age": "50",
             "NetWorth": "20.4b",
-            "Photo": "elonmusk",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -32,17 +31,25 @@
                     "Value": 3
                 }
             ],
-            "Photo": "jeffbezzos"
+            "Companies": "Amazon",
+            "Age": "53",
+            "NetWorth": "30.4b",
+            "DialogueMatch": "Yay!",
+            "DialogueNoMatch": "Nay!"
         },
         {
-            "Name": "Test No tags",
-            "Photo": "billgates",
+            "Name": "Bill Gates",
             "Tags": [
                 {
                     "Name": "Eco",
                     "Value": 5
                 }
-            ]
+            ],
+            "Companies": "Microsoft",
+            "Age": "62",
+            "NetWorth": "12.4b",
+            "DialogueMatch": "Woo!",
+            "DialogueNoMatch": "Boo!"
         }
     ]
 }

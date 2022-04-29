@@ -7,9 +7,7 @@ public class TagElement : MonoBehaviour {
     [SerializeField] TMP_Text Name;
 
     public void Populate(TagData tag) {
-        if (!string.IsNullOrEmpty(tag.Icon)) {
-            Icon.sprite = tag.GetSprite();
-        }
-        Name.text = tag.Name;
+        Icon.sprite = tag.GetSprite();
+        Name.text = $"{tag.Name} {tag.Value}";
     }
 }
