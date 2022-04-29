@@ -40,14 +40,16 @@ public class LoveManager : MonoBehaviour
         ratingLookup.ContainsKey(stonker) ? ratingLookup[stonker] : 0;
     
     public bool TryMatch(StonkerData stonker) {
-        var stonkerValue = 0f;
+        var stonkerValue = 1f;
         var playerValue = 0f;
 
-        foreach (var tag in stonker.Tags) {
-            stonkerValue += tag.Value;
-            
-            if (playerTags.ContainsKey(tag)) {
-                playerValue += playerTags[tag];
+        if (stonker.Tags != null) {
+            foreach (var tag in stonker.Tags) {
+                stonkerValue += tag.Value;
+                
+                if (playerTags.ContainsKey(tag)) {
+                    playerValue += playerTags[tag];
+                }
             }
         }
 

@@ -39,9 +39,10 @@ public class BrowseScreen : MonoBehaviour
 
     public void HideResult() {
         MatchResultGO.SetActive(false);
+        NextStonker();
     }
 
-    public void NextCompany() {
+    public void NextStonker() {
         index = (int) Mathf.Repeat(index + 1, LoveManager.Instance.Stonkers.Length);
         SelectCompany(index);
     }
