@@ -18,8 +18,6 @@ public class BrowseScreen : MonoBehaviour
 
     [SerializeField] MatchPopup MatchPopup;
 
-    [SerializeField] Image[] Lives;
-
     StonkerData stonker;
 
     public void Awake() {
@@ -39,6 +37,14 @@ public class BrowseScreen : MonoBehaviour
     void ShowResult(bool liked) {
         MatchPopup.Open();
         MatchPopup.Populate(stonker, liked);
+
+        if (stonker.Name == "Elon Musk") {
+            if (LoveManager.Inst.FirstLife) {
+                LoveManager.Inst.FirstLife = false;
+            } else {
+                LoveManager.Inst.LoseLife();
+            }
+        }
     }
 
     public void HideResult() {
@@ -70,10 +76,6 @@ public class BrowseScreen : MonoBehaviour
                 var tagElement = Instantiate(TagPrefab, TagContainer).GetComponent<TagElement>();
                 tagElement.Populate(tag);
             }
-        }
-
-        for (var i = 0; i < 5; i++) {
-            Lives[i].enabled = LoveManager.Inst.Lives >= i;
         }
     }
 }

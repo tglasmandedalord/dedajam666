@@ -12,12 +12,7 @@ public class FlowManager : MonoBehaviour
     public GameObject profile;
 
     void Awake() {
-        if (Instance == null) {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        } else {
-            Destroy(this);
-        }
+        Instance = this;
 
         splash.SetActive(true);
         signup.SetActive(true);
