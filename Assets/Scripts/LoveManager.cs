@@ -7,8 +7,8 @@ public class LoveManager : MonoBehaviour
 {
     public List<TagData> PlayerTags;
     public int PlayerLevel => PlayerTags.Sum(t => t.Value);
-    public List<StonkerData> Stonkers;
-    public List<StonkerData> MatchedStonkers;
+    public List<StonkerData> AvailableStonkers;
+    public List<StonkerData> AllStonkers;
     public List<string> DialogueMatchGeneric = new List<string>();
     public List<string> DialogueNoMatchGeneric = new List<string>();
     public string RandomDialogueMatch => DialogueMatchGeneric[UnityEngine.Random.Range(0, DialogueMatchGeneric.Count)];
@@ -21,10 +21,11 @@ public class LoveManager : MonoBehaviour
     void Awake() {
         var stonkersFile = Resources.Load<TextAsset>("stonkers");
         stonkers = JsonUtility.FromJson<StonkersDatabase>(stonkersFile.text);
-        Stonkers = stonkers.Stonkers.ToList();
+        AvailableStonkers = stonkers.Stonkers.ToList();
+        AllStonkers = stonkers.Stonkers.ToList();
 
         PlayerTags = new List<TagData>();
-        foreach (var tag in Stonkers.SelectMany(s => s.Tags)) {
+        foreach (var tag in AvailableStonkers.SelectMany(s => s.Tags)) {
             if (!PlayerTags.Any(t => t.Name == tag.Name)) {
                 var emptyTag = new TagData(tag.Name);
                 PlayerTags.Add(emptyTag);
@@ -48,13 +49,17 @@ public class LoveManager : MonoBehaviour
         }
     }
 
+    List<StonkerData> SortedStonkers;
     StonkerData lastStonker;
     public StonkerData GetRandomStonker() {
-        var candidates = Stonkers.Where(s => PlayerLevel / s.Level >= 0.3f).ToList();
+        var candidates = AvailableStonkers.OrderBy(s => s.Level).ToList();
 
-        var candidate = Random.Range(0, candidates.Count);
+        var candidate = Random.Range(0, Mathf.Min(10, candidates.Count));
+        while (candidates[candidate] == lastStonker) {
+            candidate = Random.Range(0, Mathf.Min(10, candidates.Count));
+        }
         lastStonker = candidates[candidate];
-        Debug.Log("Chosen stonker: " + candidates[candidate].Name);
+        Debug.Log("Chosen stonker: " + lastStonker.Name);
         return lastStonker;
     }
     
@@ -76,7 +81,7 @@ public class LoveManager : MonoBehaviour
         var chance = playerValue / stonkerValue;
 
         if (UnityEngine.Random.Range(0f, 1f) < chance) {
-            MatchedStonkers.Add(stonker);
+            AvailableStonkers.Remove(stonker);
 
             foreach (var tag in stonker.Tags) {
                 var playerTag = PlayerTags.FirstOrDefault(t => t.Name == tag.Name);

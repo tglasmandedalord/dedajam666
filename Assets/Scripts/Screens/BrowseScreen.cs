@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class BrowseScreen : MonoBehaviour
 {
@@ -17,12 +18,11 @@ public class BrowseScreen : MonoBehaviour
 
     [SerializeField] MatchPopup MatchPopup;
 
-    int index;
     StonkerData stonker;
+    int counter = 5;
 
-    public void OnEnable() {
-        index = UnityEngine.Random.Range(0, LoveManager.Inst.Stonkers.Count);
-        SelectStonker(index);
+    public void Awake() {
+        SelectStonker();
     }
 
     public void SwipeLeft() {
@@ -42,17 +42,17 @@ public class BrowseScreen : MonoBehaviour
 
     public void HideResult() {
         MatchPopup.Close();
-        NextStonker();
+        SelectStonker();
     }
 
-    public void NextStonker() {
-        index = (int) Mathf.Repeat(index + 1, LoveManager.Inst.Stonkers.Count);
-        SelectStonker(index);
-    }
-
-    void SelectStonker(int index) {
-        // stonker = LoveManager.Inst.GetRandomStonker();
-        stonker = LoveManager.Inst.Stonkers[index];
+    void SelectStonker() {
+        counter++;
+        if (counter >= 5) {
+            counter = 0;
+            stonker = LoveManager.Inst.AllStonkers.First(s => s.Name == "Elon Musk");
+        } else {
+            stonker = LoveManager.Inst.GetRandomStonker();
+        }
 
         UserName.text = $"{stonker.Name}({stonker.Age})";
         UserDesc.text = stonker.Desc;
