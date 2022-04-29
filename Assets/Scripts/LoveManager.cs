@@ -31,4 +31,5 @@ public class LoveManager : MonoBehaviour
     public int GetRating(CompanyData company) => 
         ratingLookup.ContainsKey(company) ? ratingLookup[company] : 0;
     
+    public bool CheckMatch(CompanyData company) => UnityEngine.Random.Range(0, 100) > 50;
 }
