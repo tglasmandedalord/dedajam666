@@ -21,38 +21,35 @@ public class BrowseScreen : MonoBehaviour
     StonkerData stonker;
 
     public void OnEnable() {
-        index = UnityEngine.Random.Range(0, LoveManager.Instance.Stonkers.Length);
+        index = UnityEngine.Random.Range(0, LoveManager.Inst.Stonkers.Count);
         SelectStonker(index);
-        MatchPopup.gameObject.SetActive(false);
     }
 
     public void SwipeLeft() {
-        LoveManager.Instance.ChangeRating(stonker, -1);
         ShowResult(false);
     }
 
     public void SwipeRight() {
-        LoveManager.Instance.ChangeRating(stonker, +1);
-        ShowResult(true);
+        ShowResult(LoveManager.Inst.TryMatch(stonker));
     }
 
     void ShowResult(bool liked) {
-        MatchPopup.gameObject.SetActive(true);
+        MatchPopup.Open();
         MatchPopup.Populate(stonker, liked);
     }
 
     public void HideResult() {
-        MatchPopup.gameObject.SetActive(false);
+        MatchPopup.Close();
         NextStonker();
     }
 
     public void NextStonker() {
-        index = (int) Mathf.Repeat(index + 1, LoveManager.Instance.Stonkers.Length);
+        index = (int) Mathf.Repeat(index + 1, LoveManager.Inst.Stonkers.Count);
         SelectStonker(index);
     }
 
     void SelectStonker(int index) {
-        stonker = LoveManager.Instance.Stonkers[index];
+        stonker = LoveManager.Inst.Stonkers[index];
 
         UserName.text = $"{stonker.Name}({stonker.Age})";
         UserDesc.text = stonker.Desc;

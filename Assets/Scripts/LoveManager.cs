@@ -8,7 +8,8 @@ public class LoveManager : MonoBehaviour
     Dictionary<StonkerData, int> ratingLookup;
 
     public List<TagData> PlayerTags;
-    public StonkerData[] Stonkers;
+    public List<StonkerData> Stonkers;
+    public List<StonkerData> MatchedStonkers;
     public List<string> DialogueMatchGeneric = new List<string>();
     public List<string> DialogueNoMatchGeneric = new List<string>();
     public string RandomDialogueMatch => DialogueMatchGeneric[UnityEngine.Random.Range(0, DialogueMatchGeneric.Count)];
@@ -16,14 +17,14 @@ public class LoveManager : MonoBehaviour
 
     StonkersDatabase stonkers;
 
-    public static LoveManager Instance;
+    public static LoveManager Inst;
 
     void Awake() {
         ratingLookup = new Dictionary<StonkerData, int>();
 
         var stonkersFile = Resources.Load<TextAsset>("stonkers");
         stonkers = JsonUtility.FromJson<StonkersDatabase>(stonkersFile.text);
-        Stonkers = stonkers.Stonkers;
+        Stonkers = stonkers.Stonkers.ToList();
 
         PlayerTags = new List<TagData>();
         foreach (var tag in Stonkers.SelectMany(s => s.Tags)) {
@@ -42,8 +43,8 @@ public class LoveManager : MonoBehaviour
         randomTag = UnityEngine.Random.Range(0, PlayerTags.Count);
         PlayerTags[randomTag].Value += 5;
 
-        if (Instance == null) {
-            Instance = this;
+        if (Inst == null) {
+            Inst = this;
             DontDestroyOnLoad(this);
         } else {
             Destroy(this);
@@ -77,10 +78,11 @@ public class LoveManager : MonoBehaviour
         }
 
         var chance = playerValue / stonkerValue;
-        Debug.Log(playerValue + "/" + stonkerValue + "=" + chance);
 
         if (UnityEngine.Random.Range(0f, 1f) < chance) {
             ratingLookup[stonker]++;
+
+            MatchedStonkers.Add(stonker);
 
             foreach (var tag in stonker.Tags) {
                 var playerTag = PlayerTags.FirstOrDefault(t => t.Name == tag.Name);
@@ -88,9 +90,11 @@ public class LoveManager : MonoBehaviour
                     playerTag.Value += tag.Value;
                 }
             }
-
+            
+            Debug.Log(playerValue + "/" + stonkerValue + "=" + chance + "--- Match!"); 
             return true;
         } else {
+            Debug.Log(playerValue + "/" + stonkerValue + "=" + chance + "--- No Match!"); 
             return false;
         }
     }

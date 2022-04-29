@@ -22,6 +22,6 @@ public class FlowManager : MonoBehaviour
         splash.SetActive(true);
         signup.SetActive(true);
         browse.SetActive(false);
-        profile.SetActive(false);
+        profile.SetActive(true);
     }
 }

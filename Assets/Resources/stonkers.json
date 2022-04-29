@@ -28,7 +28,6 @@
             "Companies": "Tesla, SpaceX",
             "Age": "50",
             "NetWorth": "255.3 B",
-            "Photo": "elonmusk",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -60,7 +59,6 @@
             "Companies": "Apple, Disney",
             "Age": "56",
             "NetWorth": "49.5 B",
-            "Photo": "elonmusk",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -91,7 +89,6 @@
             "Companies": "Amazon",
             "Age": "58",
             "NetWorth": "153.4 B",
-            "Photo": "jeffbezos",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -122,7 +119,6 @@
             "Companies": "Moët Hennessy Louis Vuitton",
             "Age": "73",
             "NetWorth": "153.4 B",
-            "Photo": "bernardarnault",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -153,7 +149,6 @@
             "Companies": "Microsoft",
             "Age": "66",
             "NetWorth": "131.0 B",
-            "Photo": "billgates",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -184,7 +179,6 @@
             "Companies": "Adani Group",
             "Age": "59",
             "NetWorth": "125.9 B",
-            "Photo": "gautamadani",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -215,7 +209,6 @@
             "Companies": "Berkshire Hathaway",
             "Age": "91",
             "NetWorth": "118.7 B",
-            "Photo": "warrenbuffett",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -242,7 +235,6 @@
             "Companies": "Reliance Industries",
             "Age": "65",
             "NetWorth": "105.4 B",
-            "Photo": "mukeshambani",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -269,7 +261,6 @@
             "Companies": "Oracle",
             "Age": "77",
             "NetWorth": "104.9 B",
-            "Photo": "larryellison",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -300,7 +291,6 @@
             "Companies": "Alphabet",
             "Age": "49",
             "NetWorth": "100.2 B",
-            "Photo": "larrypage",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -331,7 +321,312 @@
             "Companies": "Amazon",
             "Age": "48",
             "NetWorth": "96.3 B",
-            "Photo": "sergeybrin",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Steve Ballmer",
+            "Tags": [
+                {
+                    "Name": "Tech",
+                    "Value": 17
+                },
+                {
+                    "Name": "Media",
+                    "Value": 15
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 17
+                },
+                {
+                    "Name": "Software",
+                    "Value": 18
+                }
+            ],
+            "Companies": "Microsoft",
+            "Age": "66",
+            "NetWorth": "92.5 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Carlos Slim Helu",
+            "Tags": [
+                {
+                    "Name": "Telecom",
+                    "Value": 18
+                },
+                {
+                    "Name": "Construction",
+                    "Value": 15
+                },
+                {
+                    "Name": "RealState",
+                    "Value": 16
+                },
+                {
+                    "Name": "Food",
+                    "Value": 14
+                }
+            ],
+            "Companies": "América Móvil",
+            "Age": "82",
+            "NetWorth": "84.1 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Michael Bloomberg",
+            "Tags": [
+                {
+                    "Name": "Crypto",
+                    "Value": 16
+                },
+                {
+                    "Name": "Media",
+                    "Value": 18
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 13
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 14
+                }
+            ],
+            "Companies": "Bloomberg LP",
+            "Age": "80",
+            "NetWorth": "82.0 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Mark Zuckerberg",
+            "Tags": [
+                {
+                    "Name": "Media",
+                    "Value": 18
+                },
+                {
+                    "Name": "Software",
+                    "Value": 16
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 13
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 20
+                }
+            ],
+            "Companies": "Meta",
+            "Age": "37",
+            "NetWorth": "74.2 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Francoise Bettencourt Meyers",
+            "Tags": [
+                {
+                    "Name": "Fashion",
+                    "Value": 19
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 16
+                },
+                {
+                    "Name": "Production",
+                    "Value": 11
+                },
+                {
+                    "Name": "Health",
+                    "Value": 7
+                }
+            ],
+            "Companies": "L'Oreal",
+            "Age": "68",
+            "NetWorth": "73.8 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Jim Walton",
+            "Tags": [
+                {
+                    "Name": "Crypto",
+                    "Value": 19
+                },
+                {
+                    "Name": "Food",
+                    "Value": 19
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 11
+                },
+                {
+                    "Name": "Services",
+                    "Value": 8
+                }
+            ],
+            "Companies": "Arvest Bank, Walmart",
+            "Age": "73",
+            "NetWorth": "73.8 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Alice Walton",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 19
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 11
+                },
+                {
+                    "Name": "Services",
+                    "Value": 8
+                }
+            ],
+            "Companies": "Walmart",
+            "Age": "72",
+            "NetWorth": "69.7 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Rob Walton",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 19
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 11
+                },
+                {
+                    "Name": "Services",
+                    "Value": 8
+                }
+            ],
+            "Companies": "Walmart",
+            "Age": "77",
+            "NetWorth": "69.4 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Zhong Shanshan",
+            "Tags": [
+                {
+                    "Name": "Health",
+                    "Value": 19
+                },
+                {
+                    "Name": "Food",
+                    "Value": 12
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 5
+                }
+            ],
+            "Companies": "Beijing Wantai Biological Pharmacy",
+            "Age": "67",
+            "NetWorth": "68.6 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Changpeng Zhao",
+            "Tags": [
+                {
+                    "Name": "Crypto",
+                    "Value": 20
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 15
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 11
+                }
+            ],
+            "Companies": "Binance",
+            "Age": "44",
+            "NetWorth": "65.0 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Charles Koch",
+            "Tags": [
+                {
+                    "Name": "Production",
+                    "Value": 19
+                },
+                {
+                    "Name": "Food",
+                    "Value": 9
+                }
+            ],
+            "Companies": "Koch Industries",
+            "Age": "86",
+            "NetWorth": "63.1 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Julia Koch",
+            "Tags": [
+                {
+                    "Name": "Production",
+                    "Value": 19
+                },
+                {
+                    "Name": "Fashion",
+                    "Value": 11
+                },
+                {
+                    "Name": "Food",
+                    "Value": 9
+                }
+            ],
+            "Companies": "Koch Industries",
+            "Age": "60",
+            "NetWorth": "63.1 B",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+                {
+            "Name": "Amancio Ortega",
+            "Tags": [
+                {
+                    "Name": "Fashion",
+                    "Value": 15
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 13
+                },
+                {
+                    "Name": "Production",
+                    "Value": 10
+                }
+            ],
+            "Companies": "Zara",
+            "Age": "86",
+            "NetWorth": "54.0 B",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         }

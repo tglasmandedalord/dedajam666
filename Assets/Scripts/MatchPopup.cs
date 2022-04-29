@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
+[RequireComponent(typeof(CanvasGroup))]
 public class MatchPopup : MonoBehaviour
 {
     [SerializeField] Image UserProfilePic;
@@ -21,9 +23,9 @@ public class MatchPopup : MonoBehaviour
         DialoguePic.sprite = stonker.GetSprite();
 
         if (matched) {
-            Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueMatch) ? stonker.DialogueMatch : LoveManager.Instance.RandomDialogueMatch;
+            Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueMatch) ? stonker.DialogueMatch : LoveManager.Inst.RandomDialogueMatch;
         } else {
-            Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueNoMatch) ? stonker.DialogueNoMatch : LoveManager.Instance.RandomDialogueNoMatch;
+            Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueNoMatch) ? stonker.DialogueNoMatch : LoveManager.Inst.RandomDialogueNoMatch;
         }
 
         foreach (Transform child in TagContainer) {
@@ -40,7 +42,19 @@ public class MatchPopup : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void Open() {
+        var canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.DOFade(1f, 0.5f).onComplete += () => {
+            canvasGroup.interactable = true;
+        };
+        canvasGroup.blocksRaycasts = true;
+    }
+
     public void Close() {
-        gameObject.SetActive(false);
+        var canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.interactable = false;
+        canvasGroup.DOFade(0f, 0.5f).onComplete += () => {
+            canvasGroup.blocksRaycasts = false;
+        };
     }
 }
