@@ -61,8 +61,7 @@ public class BrowseScreen : MonoBehaviour
         UserCompanies.text = stonker.Companies;
 
         if (!string.IsNullOrEmpty(stonker.Photo)) {
-            var photo = Resources.Load<Texture2D>("Photos/" + stonker.Photo);
-            UserProfilePic.sprite = Sprite.Create(photo, new Rect(0, 0, photo.width, photo.height), new Vector2(0.5f, 0.5f));
+            UserProfilePic.sprite = stonker.GetSprite();
         }
 
         foreach (Transform child in TagContainer) {

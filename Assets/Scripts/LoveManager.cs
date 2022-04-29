@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LoveManager : MonoBehaviour
 {
     Dictionary<StonkerData, int> ratingLookup;
-    Dictionary<TagData, int> playerTags;
 
+    public List<TagData> PlayerTags;
     public StonkerData[] Stonkers;
     StonkersDatabase stonkers;
 
@@ -14,11 +15,27 @@ public class LoveManager : MonoBehaviour
 
     void Awake() {
         ratingLookup = new Dictionary<StonkerData, int>();
-        playerTags = new Dictionary<TagData, int>();
 
         var stonkersFile = Resources.Load<TextAsset>("stonkers");
         stonkers = JsonUtility.FromJson<StonkersDatabase>(stonkersFile.text);
         Stonkers = stonkers.Stonkers;
+
+        PlayerTags = new List<TagData>();
+        foreach (var tag in Stonkers.SelectMany(s => s.Tags)) {
+            if (!PlayerTags.Any(t => t.Name == tag.Name)) {
+                var emptyTag = new TagData(tag.Name, tag.Icon);
+                PlayerTags.Add(emptyTag);
+            }
+        }
+
+        var randomTag = UnityEngine.Random.Range(0, PlayerTags.Count);
+        PlayerTags[randomTag].Value += 5;
+
+        randomTag = UnityEngine.Random.Range(0, PlayerTags.Count);
+        PlayerTags[randomTag].Value += 5;
+
+        randomTag = UnityEngine.Random.Range(0, PlayerTags.Count);
+        PlayerTags[randomTag].Value += 5;
 
         if (Instance == null) {
             Instance = this;
@@ -47,8 +64,9 @@ public class LoveManager : MonoBehaviour
             foreach (var tag in stonker.Tags) {
                 stonkerValue += tag.Value;
                 
-                if (playerTags.ContainsKey(tag)) {
-                    playerValue += playerTags[tag];
+                var playerTag = PlayerTags.FirstOrDefault(t => t.Name == tag.Name);
+                if (playerTag != null) {
+                    playerValue += playerTag.Value;
                 }
             }
         }
@@ -58,6 +76,14 @@ public class LoveManager : MonoBehaviour
 
         if (UnityEngine.Random.Range(0f, 1f) < chance) {
             ratingLookup[stonker]++;
+
+            foreach (var tag in stonker.Tags) {
+                var playerTag = PlayerTags.FirstOrDefault(t => t.Name == tag.Name);
+                if (playerTag != null) {
+                    playerTag.Value += tag.Value;
+                }
+            }
+
             return true;
         } else {
             return false;

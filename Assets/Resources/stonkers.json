@@ -28,15 +28,21 @@
             "Name": "Jeff Bezzos",
             "Tags": [
                 {
-                    "Name": "Anti Union",
-                    "Value": 50
+                    "Name": "Media",
+                    "Value": 3
                 }
             ],
             "Photo": "jeffbezzos"
         },
         {
             "Name": "Test No tags",
-            "Photo": "billgates"
+            "Photo": "billgates",
+            "Tags": [
+                {
+                    "Name": "Eco",
+                    "Value": 5
+                }
+            ]
         }
     ]
 }
