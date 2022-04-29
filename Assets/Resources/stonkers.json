@@ -1,0 +1,42 @@
+{
+    "Stonkers": [
+        {
+            "Name": "Elon Musk",
+            "Desc": "FREE SPEECH!",
+            "Tags": [
+                {
+                    "Name": "Space",
+                    "Value": 20
+                },
+                {
+                    "Name": "Eco",
+                    "Value": 5
+                },
+                {
+                    "Name": "Media",
+                    "Value": 8
+                }
+            ],
+            "Companies": "Tesla, SpaceX",
+            "Age": "50",
+            "NetWorth": "20.4b",
+            "Photo": "elonmusk",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Jeff Bezzos",
+            "Tags": [
+                {
+                    "Name": "Anti Union",
+                    "Value": 50
+                }
+            ],
+            "Photo": "jeffbezzos"
+        },
+        {
+            "Name": "Test No tags",
+            "Photo": "billgates"
+        }
+    ]
+}

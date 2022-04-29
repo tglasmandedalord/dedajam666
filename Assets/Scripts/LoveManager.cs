@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class LoveManager : MonoBehaviour
 {
-    public CompanyData[] companies;
-    Dictionary<CompanyData, int> ratingLookup;
+    Dictionary<StonkerData, int> ratingLookup;
+    Dictionary<TagData, int> playerTags;
+
+    public StonkerData[] Stonkers;
+    StonkersDatabase stonkers;
 
     public static LoveManager Instance;
 
     void Awake() {
-        ratingLookup = new Dictionary<CompanyData, int>();
+        ratingLookup = new Dictionary<StonkerData, int>();
+        playerTags = new Dictionary<TagData, int>();
+
+        var stonkersFile = Resources.Load<TextAsset>("stonkers");
+        stonkers = JsonUtility.FromJson<StonkersDatabase>(stonkersFile.text);
+        Stonkers = stonkers.Stonkers;
 
         if (Instance == null) {
             Instance = this;
@@ -20,16 +28,37 @@ public class LoveManager : MonoBehaviour
         }
     }
 
-    public void ChangeRating(CompanyData company, int ratingChange) {
-        if (ratingLookup.ContainsKey(company)) {
-            ratingLookup[company] += ratingChange;
+    public void ChangeRating(StonkerData stonker, int ratingChange) {
+        if (ratingLookup.ContainsKey(stonker)) {
+            ratingLookup[stonker] += ratingChange;
         } else {
-            ratingLookup.Add(company, ratingChange);
+            ratingLookup.Add(stonker, ratingChange);
         }
     }
 
-    public int GetRating(CompanyData company) => 
-        ratingLookup.ContainsKey(company) ? ratingLookup[company] : 0;
+    public int GetRating(StonkerData stonker) => 
+        ratingLookup.ContainsKey(stonker) ? ratingLookup[stonker] : 0;
     
-    public bool CheckMatch(CompanyData company) => UnityEngine.Random.Range(0, 100) > 50;
+    public bool TryMatch(StonkerData stonker) {
+        var stonkerValue = 0f;
+        var playerValue = 0f;
+
+        foreach (var tag in stonker.Tags) {
+            stonkerValue += tag.Value;
+            
+            if (playerTags.ContainsKey(tag)) {
+                playerValue += playerTags[tag];
+            }
+        }
+
+        var chance = playerValue / stonkerValue;
+        Debug.Log(playerValue + "/" + stonkerValue + "=" + chance);
+
+        if (UnityEngine.Random.Range(0f, 1f) < chance) {
+            ratingLookup[stonker]++;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
