@@ -15,8 +15,7 @@ public class BrowseScreen : MonoBehaviour
     [SerializeField] Transform TagContainer;
     [SerializeField] GameObject TagPrefab;
 
-    [SerializeField] GameObject MatchResultGO;
-    [SerializeField] TMP_Text MatchResult;
+    [SerializeField] MatchPopup MatchPopup;
 
     int index;
     StonkerData stonker;
@@ -24,7 +23,7 @@ public class BrowseScreen : MonoBehaviour
     public void OnEnable() {
         index = UnityEngine.Random.Range(0, LoveManager.Instance.Stonkers.Length);
         SelectStonker(index);
-        MatchResultGO.SetActive(false);
+        MatchPopup.gameObject.SetActive(false);
     }
 
     public void SwipeLeft() {
@@ -38,12 +37,12 @@ public class BrowseScreen : MonoBehaviour
     }
 
     void ShowResult(bool liked) {
-        MatchResultGO.SetActive(true);
-        MatchResult.text = liked && LoveManager.Instance.TryMatch(stonker) ? "Match!" : "No match :(";
+        MatchPopup.gameObject.SetActive(true);
+        MatchPopup.Populate(stonker, liked);
     }
 
     public void HideResult() {
-        MatchResultGO.SetActive(false);
+        MatchPopup.gameObject.SetActive(false);
         NextStonker();
     }
 

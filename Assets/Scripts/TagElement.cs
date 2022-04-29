@@ -6,8 +6,8 @@ public class TagElement : MonoBehaviour {
     [SerializeField] Image Icon;
     [SerializeField] TMP_Text Name;
 
-    public void Populate(TagData tag) {
+    public void Populate(TagData tag, bool addPlusSign = false) {
         Icon.sprite = tag.GetSprite();
-        Name.text = $"{tag.Name} {tag.Value}";
+        Name.text = $"{tag.Name} {(addPlusSign ? "+":"")}{tag.Value}";
     }
 }

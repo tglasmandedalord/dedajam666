@@ -9,6 +9,11 @@ public class LoveManager : MonoBehaviour
 
     public List<TagData> PlayerTags;
     public StonkerData[] Stonkers;
+    public List<string> DialogueMatchGeneric = new List<string>();
+    public List<string> DialogueNoMatchGeneric = new List<string>();
+    public string RandomDialogueMatch => DialogueMatchGeneric[UnityEngine.Random.Range(0, DialogueMatchGeneric.Count)];
+    public string RandomDialogueNoMatch => DialogueNoMatchGeneric[UnityEngine.Random.Range(0, DialogueNoMatchGeneric.Count)];
+
     StonkersDatabase stonkers;
 
     public static LoveManager Instance;

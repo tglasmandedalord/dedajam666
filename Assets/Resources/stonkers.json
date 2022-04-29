@@ -5,21 +5,62 @@
             "Desc": "FREE SPEECH!",
             "Tags": [
                 {
-                    "Name": "Space",
+                    "Name": "Cars",
                     "Value": 20
                 },
                 {
-                    "Name": "Eco",
-                    "Value": 5
+                    "Name": "Tech",
+                    "Value": 20
                 },
                 {
                     "Name": "Media",
-                    "Value": 8
+                    "Value": 20
+                },
+                {
+                    "Name": "Crytpo",
+                    "Value": 20
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 20
                 }
             ],
             "Companies": "Tesla, SpaceX",
             "Age": "50",
-            "NetWorth": "20.4b",
+            "NetWorth": "255.3 B",
+            "Photo": "elonmusk",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Steve Jobs",
+            "Desc": "RIP",
+            "Tags": [
+                {
+                    "Name": "Media",
+                    "Value": 19
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 19
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 18
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 13
+                },
+                {
+                    "Name": "Software",
+                    "Value": 17
+                }
+            ],
+            "Companies": "Apple, Disney",
+            "Age": "56",
+            "NetWorth": "49.5 B",
+            "Photo": "elonmusk",
             "DialogueMatch": ":)",
             "DialogueNoMatch": ":("
         },
@@ -27,29 +68,272 @@
             "Name": "Jeff Bezzos",
             "Tags": [
                 {
+                    "Name": "Tech",
+                    "Value": 19
+                },
+                {
                     "Name": "Media",
-                    "Value": 3
+                    "Value": 19
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 19
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 20
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 16
                 }
             ],
             "Companies": "Amazon",
-            "Age": "53",
-            "NetWorth": "30.4b",
-            "DialogueMatch": "Yay!",
-            "DialogueNoMatch": "Nay!"
+            "Age": "58",
+            "NetWorth": "153.4 B",
+            "Photo": "jeffbezos",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+        {
+            "Name": "Bernard Arnault",
+            "Tags": [
+                {
+                    "Name": "Fashion",
+                    "Value": 20
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 19
+                },
+                {
+                    "Name": "Production",
+                    "Value": 18
+                },
+                {
+                    "Name": "RealState",
+                    "Value": 15
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 8
+                }
+            ],
+            "Companies": "Moët Hennessy Louis Vuitton",
+            "Age": "73",
+            "NetWorth": "153.4 B",
+            "Photo": "bernardarnault",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
         },
         {
             "Name": "Bill Gates",
             "Tags": [
                 {
-                    "Name": "Eco",
-                    "Value": 5
+                    "Name": "Tech",
+                    "Value": 19
+                },
+                {
+                    "Name": "Media",
+                    "Value": 17
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 19
+                },
+                {
+                    "Name": "Software",
+                    "Value": 20
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 13
                 }
             ],
             "Companies": "Microsoft",
-            "Age": "62",
-            "NetWorth": "12.4b",
-            "DialogueMatch": "Woo!",
-            "DialogueNoMatch": "Boo!"
+            "Age": "66",
+            "NetWorth": "131.0 B",
+            "Photo": "billgates",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Gautam Adani",
+            "Tags": [
+                {
+                    "Name": "Energy",
+                    "Value": 19
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 12
+                },
+                {
+                    "Name": "Production",
+                    "Value": 13
+                },
+                {
+                    "Name": "Construction",
+                    "Value": 16
+                },
+                {
+                    "Name": "RealState",
+                    "Value": 17
+                }
+            ],
+            "Companies": "Adani Group",
+            "Age": "59",
+            "NetWorth": "125.9 B",
+            "Photo": "gautamadani",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Warren Buffett",
+            "Tags": [
+                {
+                    "Name": "Crypto",
+                    "Value": 19
+                },
+                {
+                    "Name": "Production",
+                    "Value": 16
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 19
+                },
+                {
+                    "Name": "Services",
+                    "Value": 15
+                },
+                {
+                    "Name": "Food",
+                    "Value": 11
+                }
+            ],
+            "Companies": "Berkshire Hathaway",
+            "Age": "91",
+            "NetWorth": "118.7 B",
+            "Photo": "warrenbuffett",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Mukesh Ambani",
+            "Tags": [
+                {
+                    "Name": "Energy",
+                    "Value": 17
+                },
+                {
+                    "Name": "Production",
+                    "Value": 14
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 18
+                },
+                {
+                    "Name": "Services",
+                    "Value": 11
+                }
+            ],
+            "Companies": "Reliance Industries",
+            "Age": "65",
+            "NetWorth": "105.4 B",
+            "Photo": "mukeshambani",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Larry Ellison",
+            "Tags": [
+                {
+                    "Name": "Software",
+                    "Value": 19
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 11
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 12
+                },
+                {
+                    "Name": "Crypto",
+                    "Value": 16
+                }
+            ],
+            "Companies": "Oracle",
+            "Age": "77",
+            "NetWorth": "104.9 B",
+            "Photo": "larryellison",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Larry Page",
+            "Tags": [
+                {
+                    "Name": "Software",
+                    "Value": 20
+                },
+                {
+                    "Name": "Media",
+                    "Value": 18
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 18
+                },
+                {
+                    "Name": "Cars",
+                    "Value": 16
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 18
+                }
+            ],
+            "Companies": "Alphabet",
+            "Age": "49",
+            "NetWorth": "100.2 B",
+            "Photo": "larrypage",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
+        },
+               {
+            "Name": "Sergey Brin",
+            "Tags": [
+                {
+                    "Name": "Tech",
+                    "Value": 19
+                },
+                {
+                    "Name": "Media",
+                    "Value": 19
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 20
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 20
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 10
+                }
+            ],
+            "Companies": "Amazon",
+            "Age": "48",
+            "NetWorth": "96.3 B",
+            "Photo": "sergeybrin",
+            "DialogueMatch": ":)",
+            "DialogueNoMatch": ":("
         }
     ]
 }
