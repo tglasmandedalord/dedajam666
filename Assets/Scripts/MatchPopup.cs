@@ -9,18 +9,41 @@ using DG.Tweening;
 public class MatchPopup : MonoBehaviour
 {
     [SerializeField] Image UserProfilePic;
-    [SerializeField] Image DialoguePic;
     [SerializeField] TMP_Text MatchResult;
+    [SerializeField] GameObject MatchImg;
+    [SerializeField] GameObject NoMatchImg;
     [SerializeField] TMP_Text Dialogue;
     
     [SerializeField] Transform TagContainer;
     [SerializeField] GameObject TagPrefab;
 
+    [SerializeField] GameObject GoodEnding;
+    [SerializeField] GameObject BadEnding;
+    [SerializeField] GameObject MatchGroup;    
+
     public void Populate(StonkerData stonker, bool matched) {
+        BadEnding.SetActive(LoveManager.Inst.Lives == 0);        
+        GoodEnding.SetActive(LoveManager.Inst.Lives == 0);        
+
+        if (LoveManager.Inst.Lives == 0) {
+            BadEnding.SetActive(true);
+            GoodEnding.SetActive(false);
+            MatchGroup.SetActive(false);
+            return;
+        } else if (stonker.Name == "Elon Musk" && matched) {
+            BadEnding.SetActive(false);
+            GoodEnding.SetActive(true);
+            MatchGroup.SetActive(false);
+            return;
+        } else {
+            BadEnding.SetActive(false);
+            GoodEnding.SetActive(false);
+            MatchGroup.SetActive(true);
+        }
+
         MatchResult.text = matched ? "Match!" : "No match :(";
 
         UserProfilePic.sprite = stonker.GetSprite();
-        DialoguePic.sprite = stonker.GetSprite();
 
         if (matched) {
             Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueMatch) ? stonker.DialogueMatch : LoveManager.Inst.RandomDialogueMatch;

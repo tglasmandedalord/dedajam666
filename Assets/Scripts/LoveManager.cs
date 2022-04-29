@@ -14,6 +14,10 @@ public class LoveManager : MonoBehaviour
     public string RandomDialogueMatch => DialogueMatchGeneric[UnityEngine.Random.Range(0, DialogueMatchGeneric.Count)];
     public string RandomDialogueNoMatch => DialogueNoMatchGeneric[UnityEngine.Random.Range(0, DialogueNoMatchGeneric.Count)];
 
+    public int ElonCounter = 5;
+    public int Lives = 4;
+    bool FirstLife = true;
+
     StonkersDatabase stonkers;
 
     public static LoveManager Inst;
@@ -93,7 +97,14 @@ public class LoveManager : MonoBehaviour
             Debug.Log(playerValue + "/" + stonkerValue + "=" + chance + "--- Match!"); 
             return true;
         } else {
-            Debug.Log(playerValue + "/" + stonkerValue + "=" + chance + "--- No Match!"); 
+            Debug.Log(playerValue + "/" + stonkerValue + "=" + chance + "--- No Match!");
+            if (stonker.Name == "Elon Musk") {
+                if (FirstLife) {
+                    FirstLife = false;
+                } else {
+                    Lives--;
+                }
+            }
             return false;
         }
     }

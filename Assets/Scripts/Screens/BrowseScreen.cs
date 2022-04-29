@@ -18,8 +18,9 @@ public class BrowseScreen : MonoBehaviour
 
     [SerializeField] MatchPopup MatchPopup;
 
+    [SerializeField] Image[] Lives;
+
     StonkerData stonker;
-    int counter = 5;
 
     public void Awake() {
         SelectStonker();
@@ -46,9 +47,9 @@ public class BrowseScreen : MonoBehaviour
     }
 
     void SelectStonker() {
-        counter++;
-        if (counter >= 5) {
-            counter = 0;
+        LoveManager.Inst.ElonCounter++;
+        if (LoveManager.Inst.ElonCounter >= 5) {
+            LoveManager.Inst.ElonCounter = 0;
             stonker = LoveManager.Inst.AllStonkers.First(s => s.Name == "Elon Musk");
         } else {
             stonker = LoveManager.Inst.GetRandomStonker();
@@ -69,6 +70,10 @@ public class BrowseScreen : MonoBehaviour
                 var tagElement = Instantiate(TagPrefab, TagContainer).GetComponent<TagElement>();
                 tagElement.Populate(tag);
             }
+        }
+
+        for (var i = 0; i < 5; i++) {
+            Lives[i].enabled = LoveManager.Inst.Lives >= i;
         }
     }
 }
