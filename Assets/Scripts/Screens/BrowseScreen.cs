@@ -42,7 +42,7 @@ public class BrowseScreen : MonoBehaviour
             if (LoveManager.Inst.FirstLife) {
                 LoveManager.Inst.FirstLife = false;
             } else {
-                LoveManager.Inst.LoseLife();
+                // LoveManager.Inst.LoseLife();
             }
         }
     }

@@ -21,11 +21,13 @@ public class MatchPopup : MonoBehaviour
     [SerializeField] GameObject BadEnding;
     [SerializeField] GameObject MatchGroup;    
 
-    public void Populate(StonkerData stonker, bool matched) {
-        BadEnding.SetActive(LoveManager.Inst.Lives == 0);        
-        GoodEnding.SetActive(LoveManager.Inst.Lives == 0);        
+    void Awake() {
+        var canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0;
+    }
 
-        if (LoveManager.Inst.Lives == 0) {
+    public void Populate(StonkerData stonker, bool matched) {
+        if (LoveManager.Inst.Lives < 0) {
             BadEnding.SetActive(true);
             GoodEnding.SetActive(false);
             MatchGroup.SetActive(false);
