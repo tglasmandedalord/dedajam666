@@ -63,7 +63,7 @@ public class BrowseScreen : MonoBehaviour
 
         UserName.text = $"{stonker.Name}({stonker.Age})";
         UserDesc.text = stonker.Desc;
-        UserNetWorth.text = stonker.Networth;
+        UserNetWorth.text = stonker.NetWorth;
         UserCompanies.text = stonker.Companies;
         UserProfilePic.sprite = stonker.GetSprite();
 

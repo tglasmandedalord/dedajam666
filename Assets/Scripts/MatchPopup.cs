@@ -27,6 +27,9 @@ public class MatchPopup : MonoBehaviour
     }
 
     public void Populate(StonkerData stonker, bool matched) {
+        MatchImg.gameObject.SetActive(matched);
+        NoMatchImg.gameObject.SetActive(!matched);
+
         if (LoveManager.Inst.Lives < 0) {
             BadEnding.SetActive(true);
             GoodEnding.SetActive(false);
