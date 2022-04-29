@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class LoveManager : MonoBehaviour
 {
-    Dictionary<StonkerData, int> ratingLookup;
-
     public List<TagData> PlayerTags;
+    public int PlayerLevel => PlayerTags.Sum(t => t.Value);
     public List<StonkerData> Stonkers;
     public List<StonkerData> MatchedStonkers;
     public List<string> DialogueMatchGeneric = new List<string>();
@@ -20,8 +19,6 @@ public class LoveManager : MonoBehaviour
     public static LoveManager Inst;
 
     void Awake() {
-        ratingLookup = new Dictionary<StonkerData, int>();
-
         var stonkersFile = Resources.Load<TextAsset>("stonkers");
         stonkers = JsonUtility.FromJson<StonkersDatabase>(stonkersFile.text);
         Stonkers = stonkers.Stonkers.ToList();
@@ -51,16 +48,15 @@ public class LoveManager : MonoBehaviour
         }
     }
 
-    public void ChangeRating(StonkerData stonker, int ratingChange) {
-        if (ratingLookup.ContainsKey(stonker)) {
-            ratingLookup[stonker] += ratingChange;
-        } else {
-            ratingLookup.Add(stonker, ratingChange);
-        }
-    }
+    StonkerData lastStonker;
+    public StonkerData GetRandomStonker() {
+        var candidates = Stonkers.Where(s => PlayerLevel / s.Level >= 0.3f).ToList();
 
-    public int GetRating(StonkerData stonker) => 
-        ratingLookup.ContainsKey(stonker) ? ratingLookup[stonker] : 0;
+        var candidate = Random.Range(0, candidates.Count);
+        lastStonker = candidates[candidate];
+        Debug.Log("Chosen stonker: " + candidates[candidate].Name);
+        return lastStonker;
+    }
     
     public bool TryMatch(StonkerData stonker) {
         var stonkerValue = 1f;
@@ -80,8 +76,6 @@ public class LoveManager : MonoBehaviour
         var chance = playerValue / stonkerValue;
 
         if (UnityEngine.Random.Range(0f, 1f) < chance) {
-            ratingLookup[stonker]++;
-
             MatchedStonkers.Add(stonker);
 
             foreach (var tag in stonker.Tags) {

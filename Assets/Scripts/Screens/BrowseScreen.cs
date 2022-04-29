@@ -26,10 +26,12 @@ public class BrowseScreen : MonoBehaviour
     }
 
     public void SwipeLeft() {
+        Debug.Log("Swiped left");
         ShowResult(false);
     }
 
     public void SwipeRight() {
+        Debug.Log("Swiped right");
         ShowResult(LoveManager.Inst.TryMatch(stonker));
     }
 
@@ -49,6 +51,7 @@ public class BrowseScreen : MonoBehaviour
     }
 
     void SelectStonker(int index) {
+        // stonker = LoveManager.Inst.GetRandomStonker();
         stonker = LoveManager.Inst.Stonkers[index];
 
         UserName.text = $"{stonker.Name}({stonker.Age})";

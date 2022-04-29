@@ -34,7 +34,7 @@ public class UserProfile : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         var delta = Mathf.Abs(rt.anchoredPosition.x - iniPos.x);
 
         if (delta >= swipeDistance) {
-            if (rt.anchoredPosition.x > iniPos.x) {
+            if (rt.anchoredPosition.x < iniPos.x) {
                 browseScreen.SwipeLeft();
             } else {
                 browseScreen.SwipeRight();

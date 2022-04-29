@@ -28,14 +28,18 @@ public class MatchPopup : MonoBehaviour
             Dialogue.text = !string.IsNullOrEmpty(stonker.DialogueNoMatch) ? stonker.DialogueNoMatch : LoveManager.Inst.RandomDialogueNoMatch;
         }
 
-        foreach (Transform child in TagContainer) {
-            Destroy(child.gameObject);
-        }
+        TagContainer.gameObject.SetActive(matched);
 
-        if (stonker.Tags != null) {
-            foreach (var tag in stonker.Tags) {
-                var tagElement = Instantiate(TagPrefab, TagContainer).GetComponent<TagElement>();
-                tagElement.Populate(tag, true);
+        if (matched) {
+            foreach (Transform child in TagContainer) {
+                Destroy(child.gameObject);
+            }
+
+            if (stonker.Tags != null) {
+                foreach (var tag in stonker.Tags) {
+                    var tagElement = Instantiate(TagPrefab, TagContainer).GetComponent<TagElement>();
+                    tagElement.Populate(tag, true);
+                }
             }
         }
         

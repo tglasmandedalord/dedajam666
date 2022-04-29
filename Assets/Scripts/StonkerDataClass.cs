@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 [System.Serializable]
 public class StonkersDatabase {
@@ -26,6 +27,8 @@ public class StonkerData {
         }
         return null;
     }
+
+    public int Level => Tags.Sum(t => t.Value);
 }
 
 [System.Serializable]
