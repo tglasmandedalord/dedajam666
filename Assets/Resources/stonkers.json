@@ -2,7 +2,7 @@
     "Stonkers": [
         {
             "Name": "Elon Musk",
-            "Desc": "FREE SPEECH!",
+            "Desc": "Tesla stock price is too high imo",
             "Tags": [
                 {
                     "Name": "Cars",
@@ -17,7 +17,7 @@
                     "Value": 20
                 },
                 {
-                    "Name": "Crytpo",
+                    "Name": "Crypto",
                     "Value": 20
                 },
                 {
@@ -29,11 +29,11 @@
             "Age": "50",
             "NetWorth": "255.3 B",
             "DialogueMatch": ":)",
-            "DialogueNoMatch": ":("
+            "DialogueNoMatch": "Solo salgo con billonarios de verdad. Armá un portfolio de inversiones más sexy si querés conocer mi Tesla.."
         },
         {
             "Name": "Steve Jobs",
-            "Desc": "RIP",
+            "Desc": "iRIP",
             "Tags": [
                 {
                     "Name": "Media",
@@ -59,11 +59,12 @@
             "Companies": "Apple, Disney",
             "Age": "56",
             "NetWorth": "49.5 B",
-            "DialogueMatch": ":)",
-            "DialogueNoMatch": ":("
+            "DialogueMatch": "Tengo una actualización se software para vos ;) ¿Actualizás esta noche? ",
+            "DialogueNoMatch": "Force Quit"
         },
         {
             "Name": "Jeff Bezos",
+            "Desc": "CEO, entrepreneur, Born in 1964, Jeffrey, Jeffrey Bezos",
             "Tags": [
                 {
                     "Name": "Tech",
@@ -89,11 +90,12 @@
             "Companies": "Amazon",
             "Age": "58",
             "NetWorth": "153.4 B",
-            "DialogueMatch": ":)",
-            "DialogueNoMatch": ":("
+            "DialogueMatch": "¡Tengo un paquete con delivery premium para vos!",
+            "DialogueNoMatch": "Andá a comprarle a Mercado Libre, sudaca."
         },
         {
             "Name": "Bernard Arnault",
+            "Desc": "¡Préstame un sentimiento!",
             "Tags": [
                 {
                     "Name": "Fashion",
@@ -119,11 +121,12 @@
             "Companies": "Moët Hennessy Louis Vuitton",
             "Age": "73",
             "NetWorth": "153.4 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Si querés que te vistan, soy tu billonario. Si querés que te desvistan, también.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Bill Gates",
+            "Desc": "No me hice rico firmando cheques.",
             "Tags": [
                 {
                     "Name": "Tech",
@@ -149,11 +152,12 @@
             "Companies": "Microsoft",
             "Age": "66",
             "NetWorth": "131.0 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Te voy a actualizar el software.",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Gautam Adani",
+            "Desc": "Uhhh. Spicy.",
             "Tags": [
                 {
                     "Name": "Energy",
@@ -179,11 +183,12 @@
             "Companies": "Adani Group",
             "Age": "59",
             "NetWorth": "125.9 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Soy dueño de la mitad de India. Y eso incluye el kamasutra.",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Warren Buffett",
+            "Desc": "Millonarios, denle X. Solo salgo con billonarios.",
             "Tags": [
                 {
                     "Name": "Crypto",
@@ -209,11 +214,12 @@
             "Companies": "Berkshire Hathaway",
             "Age": "91",
             "NetWorth": "118.7 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Tengo un ojo para las inversiones. ¡Y vos estás en alza!",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Mukesh Ambani",
+            "Desc": "¡A ella le gusta la gasolina!",
             "Tags": [
                 {
                     "Name": "Energy",
@@ -235,11 +241,12 @@
             "Companies": "Reliance Industries",
             "Age": "65",
             "NetWorth": "105.4 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "El petrolero de tu vida.",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Larry Ellison",
+            "Desc": "¿Te caben 510 pies de longtud de yate?",
             "Tags": [
                 {
                     "Name": "Software",
@@ -261,11 +268,12 @@
             "Companies": "Oracle",
             "Age": "77",
             "NetWorth": "104.9 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Poniendo el culo en Oráculo.",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Larry Page",
+            "Desc": "Google es mi perra.",
             "Tags": [
                 {
                     "Name": "Software",
@@ -291,11 +299,12 @@
             "Companies": "Alphabet",
             "Age": "49",
             "NetWorth": "100.2 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Decime Daddy Google y podés ser parte de mi historial de búsquedas.",
             "DialogueNoMatch": ":("
         },
                {
             "Name": "Sergey Brin",
+            "Desc": "El algoritmo de tu corazón.",
             "Tags": [
                 {
                     "Name": "Tech",
@@ -318,14 +327,15 @@
                     "Value": 10
                 }
             ],
-            "Companies": "Amazon",
+            "Companies": "Alphabet",
             "Age": "48",
             "NetWorth": "96.3 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "¿Qué te parece si nos pasamos al modo incógnito?",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Steve Ballmer",
+            "Desc": "¿Cansado de jugar al solitario spider?",
             "Tags": [
                 {
                     "Name": "Tech",
@@ -347,11 +357,12 @@
             "Companies": "Microsoft",
             "Age": "66",
             "NetWorth": "92.5 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Soy un amante lento. Como el Internet Explorer.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Carlos Slim Helu",
+            "Desc": "Latino en busca de amor.",
             "Tags": [
                 {
                     "Name": "Telecom",
@@ -373,11 +384,12 @@
             "Companies": "América Móvil",
             "Age": "82",
             "NetWorth": "84.1 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "No necesito que me pases tu número, wey. Ya soy dueño de tu teléfono.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Michael Bloomberg",
+            "Desc": "Send nudes.",
             "Tags": [
                 {
                     "Name": "Crypto",
@@ -399,11 +411,12 @@
             "Companies": "Bloomberg LP",
             "Age": "80",
             "NetWorth": "82.0 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "No te preocupes, nadie se va a enterar de lo que hagamos esta noche.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Mark Zuckerberg",
+            "Desc": "Protagonicé La Red Social",
             "Tags": [
                 {
                     "Name": "Media",
@@ -425,11 +438,12 @@
             "Companies": "Meta",
             "Age": "37",
             "NetWorth": "74.2 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "¡Ya tengo lista nuestra cita en el metaverso!",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Francoise Bettencourt Meyers",
+            "Desc": "Volar alto. En mi jet privado.",
             "Tags": [
                 {
                     "Name": "Fashion",
@@ -451,11 +465,12 @@
             "Companies": "L'Oreal",
             "Age": "68",
             "NetWorth": "73.8 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Soy la mujer más rica del mundo. Llamame Mami L'Oreal.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Jim Walton",
+            "Desc": "Apasionado por los atardeceres en mi isla privada.",
             "Tags": [
                 {
                     "Name": "Crypto",
@@ -477,11 +492,12 @@
             "Companies": "Arvest Bank, Walmart",
             "Age": "73",
             "NetWorth": "73.8 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "No le hagas caso a los descuentos, acá tengo carne de calidad para vos.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Alice Walton",
+            "Desc": "No me trates como a una reina. ¡Tengo mucha más plata que ella!",
             "Tags": [
                 {
                     "Name": "Food",
@@ -499,11 +515,12 @@
             "Companies": "Walmart",
             "Age": "72",
             "NetWorth": "69.7 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Soy la reina de los minisupers. En serio. Yo. ¡Gracias, vuelva pronto!",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Rob Walton",
+            "Desc": "Sesenta y nueve billones. Nice.",
             "Tags": [
                 {
                     "Name": "Food",
@@ -521,11 +538,12 @@
             "Companies": "Walmart",
             "Age": "77",
             "NetWorth": "69.4 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Seré blanco, pero mis amigos billonarios me dicen Black Friday ;)",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Zhong Shanshan",
+            "Desc": "Experto en acupuntura... sin agujas ;)",
             "Tags": [
                 {
                     "Name": "Health",
@@ -543,11 +561,12 @@
             "Companies": "Beijing Wantai Biological Pharmacy",
             "Age": "67",
             "NetWorth": "68.6 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Tengo una inyección lista para vos.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Changpeng Zhao",
+            "Desc": "¿Querés ser tu propio jefe?",
             "Tags": [
                 {
                     "Name": "Crypto",
@@ -565,11 +584,12 @@
             "Companies": "Binance",
             "Age": "44",
             "NetWorth": "65.0 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "¡Te voy a minar todas las criptomonedas, bebé!",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Charles Koch",
+            "Desc": "En una relación abierta.",
             "Tags": [
                 {
                     "Name": "Production",
@@ -583,11 +603,12 @@
             "Companies": "Koch Industries",
             "Age": "86",
             "NetWorth": "63.1 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Pasá por el sector de verduras, que tengo una berengena para vos.",
             "DialogueNoMatch": ":("
         },
         {
             "Name": "Julia Koch",
+            "Desc": "En una relación abierta.",
             "Tags": [
                 {
                     "Name": "Production",
@@ -605,11 +626,12 @@
             "Companies": "Koch Industries",
             "Age": "60",
             "NetWorth": "63.1 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Muero de ganas de probar tu galletita.",
             "DialogueNoMatch": ":("
         },
                 {
             "Name": "Amancio Ortega",
+            "Desc": "Pasame tus medidas de yate.",
             "Tags": [
                 {
                     "Name": "Fashion",
@@ -627,7 +649,348 @@
             "Companies": "Zara",
             "Age": "86",
             "NetWorth": "54.0 B",
-            "DialogueMatch": ":)",
+            "DialogueMatch": "Siempre estoy vestido para ganar.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Michael Dell",
+            "Desc": "Un password a tu corazón.",
+            "Tags": [
+                {
+                    "Name": "Tech",
+                    "Value": 16
+                },
+                {
+                    "Name": "Software",
+                    "Value": 12
+                },
+                {
+                    "Name": "Servives",
+                    "Value": 7
+                },
+                {
+                    "Name": "Food",
+                    "Value": 6
+                }
+            ],
+            "Companies": "Dell Technologies",
+            "Age": "57",
+            "NetWorth": "53.7 B",
+            "DialogueMatch": "Vas a necesitar mejores coolers para bajarme la calentura.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Zhang Yiming",
+            "Desc": "TikTok and chill.",
+            "Tags": [
+                {
+                    "Name": "Media",
+                    "Value": 17
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 11
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 9
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 17
+                }
+            ],
+            "Companies": "TikTok",
+            "Age": "38",
+            "NetWorth": "49.5 B",
+            "DialogueMatch": "Tengo todos tus datos biométricos. ¡Y me encanta lo que veo!",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "David Thomson",
+            "Desc": "Swipe left: hippies, clase media, clase alta, clase muy alta.",
+            "Tags": [
+                {
+                    "Name": "Media",
+                    "Value": 18
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 11
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 6
+                }
+            ],
+            "Companies": "Thomson Reuters Corporation",
+            "Age": "64",
+            "NetWorth": "48.6 B",
+            "DialogueMatch": "La publicidad es el arte de seducir.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Phil Knight",
+            "Desc": "Just do me.",
+            "Tags": [
+                {
+                    "Name": "Fashion",
+                    "Value": 14
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 7
+                },
+                {
+                    "Name": "Production",
+                    "Value": 12
+                },
+                {
+                    "Name": "Sports",
+                    "Value": 15
+                }
+            ],
+            "Companies": "Nike",
+            "Age": "84",
+            "NetWorth": "48.5 B",
+            "DialogueMatch": "Adiviná cuánto calzo ;)",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Klaus-Michael Kuehne",
+            "Desc": "Admito que me gusta el vinito barato de USD $50.000",
+            "Tags": [
+                {
+                    "Name": "Logistics",
+                    "Value": 18
+                },
+                {
+                    "Name": "Production",
+                    "Value": 7
+                },
+                {
+                    "Name": "Construction",
+                    "Value": 9
+                }
+            ],
+            "Companies": "Kuehne + Nagel International AG",
+            "Age": "84",
+            "NetWorth": "42.6 B",
+            "DialogueMatch": "El tren va dentro del túnel, no sé si me explico.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Rodolphe Saade",
+            "Tags": [
+                {
+                    "Name": "Logistics",
+                    "Value": 19
+                },
+                {
+                    "Name": "Energy",
+                    "Value": 7
+                }
+            ],
+            "Companies": "CMA CGM",
+            "Age": "52",
+            "NetWorth": "41.4 B",
+            "DialogueMatch": "Voy a recorrer todas tus rutas marinas.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Dieter Schwarz",
+            "Tags": [
+                {
+                    "Name": "Logistics",
+                    "Value": 13
+                },
+                {
+                    "Name": "Food",
+                    "Value": 16
+                },
+                {
+                    "Name": "Production",
+                    "Value": 9
+                },
+                {
+                    "Name": "Services",
+                    "Value": 6
+                }
+            ],
+            "Companies": "Schwarz Group",
+            "Age": "82",
+            "NetWorth": "40.2 B",
+            "DialogueMatch": "La banana está en alza.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Ma Huateng",
+            "Tags": [
+                {
+                    "Name": "Media",
+                    "Value": 20
+                },
+                {
+                    "Name": "Tech",
+                    "Value": 15
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 16
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 12
+                }
+            ],
+            "Companies": "Tencent Holdings",
+            "Age": "50",
+            "NetWorth": "40.1 B",
+            "DialogueMatch": "Soy dueño de tus compañías de juegos favoritas. ¿No te parece sexy?",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "MacKenzie Scott",
+            "Tags": [
+                {
+                    "Name": "Tech",
+                    "Value": 9
+                },
+                {
+                    "Name": "Media",
+                    "Value": 11
+                },
+                {
+                    "Name": "Telecom",
+                    "Value": 12
+                },
+                {
+                    "Name": "Logistics",
+                    "Value": 14
+                },
+                {
+                    "Name": "Memes",
+                    "Value": 9
+                }
+            ],
+            "Companies": "Amazon",
+            "Age": "52",
+            "NetWorth": "37.7 B",
+            "DialogueMatch": "Ex del CEO, entrepreneur, Born in 1964, Jeffrey, Jeffrey Bezos",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Beate Heister y Karl Albrecht Jr.",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 12
+                }
+            ],
+            "Companies": "Aldi",
+            "Age": "??",
+            "NetWorth": "37.2 B",
+            "DialogueMatch": "Somos bi-llonarios buscando armar un tri-llonario.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Francois Pinault",
+            "Tags": [
+                {
+                    "Name": "Fashion",
+                    "Value": 19
+                },
+                {
+                    "Name": "Luxury",
+                    "Value": 19
+                }
+            ],
+            "Companies": "Kering",
+            "Age": "85",
+            "NetWorth": "36.5 B",
+            "DialogueMatch": "Las mejores marcas para los mejores amantes.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Li Ka-shing",
+            "Tags": [
+                {
+                    "Name": "Construction",
+                    "Value": 13
+                },
+                {
+                    "Name": "Production",
+                    "Value": 14
+                }
+            ],
+            "Companies": "CK Hutchison Holdings",
+            "Age": "93",
+            "NetWorth": "36.0 B",
+            "DialogueMatch": "Me dicen Superman, y no es solo por mi fortuna ;)",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Robin Zeng",
+            "Tags": [
+                {
+                    "Name": "Tech",
+                    "Value": 16
+                },
+                {
+                    "Name": "Cars",
+                    "Value": 9
+                },
+                {
+                    "Name": "Energy",
+                    "Value": 18
+                }
+            ],
+            "Companies": "Contemporary Amperex Technology",
+            "Age": "53",
+            "NetWorth": "35.6 B",
+            "DialogueMatch": "¡Nunca me quedo sin batería!",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "John Mars",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 14
+                }
+            ],
+            "Companies": "Mars",
+            "Age": "86",
+            "NetWorth": "34.9 B",
+            "DialogueMatch": "Dicen que soy dulce. Yo creo que soy más bien goloso.",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Jacqueline Mars",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 14
+                }
+            ],
+            "Companies": "Mars",
+            "Age": "82",
+            "NetWorth": "34.9 B",
+            "DialogueMatch": "¡Nada como una gran y grusa barra de chocolate!",
+            "DialogueNoMatch": ":("
+        },
+         {
+            "Name": "Giovanni Ferrero",
+            "Tags": [
+                {
+                    "Name": "Food",
+                    "Value": 15
+                }
+            ],
+            "Companies": "Ferrero",
+            "Age": "57",
+            "NetWorth": "34.7 B",
+            "DialogueMatch": "Me voy a untar de nutella para vos.",
             "DialogueNoMatch": ":("
         }
     ]

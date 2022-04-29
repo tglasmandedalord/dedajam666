@@ -29,12 +29,6 @@ public class StonkerData {
     }
 
     public int Level => Tags.Sum(t => t.Value);
-
-    StonkerData() {
-        if (GetSprite() == null) {
-            Debug.LogError(Name + " missing image");
-        }
-    }
 }
 
 [System.Serializable]

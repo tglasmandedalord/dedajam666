@@ -43,7 +43,7 @@ public class MatchPopup : MonoBehaviour
             MatchGroup.SetActive(true);
         }
 
-        MatchResult.text = matched ? "Matcheaste!" : "No matcheaste :(";
+        MatchResult.text = matched ? "Matcheaste!" : "No matcheaste...";
 
         UserProfilePic.sprite = stonker.GetSprite();
 
