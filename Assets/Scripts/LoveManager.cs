@@ -36,7 +36,7 @@ public class LoveManager : MonoBehaviour
         foreach (var tag in AvailableStonkers.SelectMany(s => s.Tags)) {
             if (!PlayerTags.Any(t => t.Name == tag.Name)) {
                 var emptyTag = new TagData(tag.Name);
-                emptyTag.Value = 3;
+                emptyTag.Value = Random.Range(1, 3);
                 PlayerTags.Add(emptyTag);
             }
         }
