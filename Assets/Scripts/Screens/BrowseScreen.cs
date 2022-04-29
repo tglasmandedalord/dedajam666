@@ -9,6 +9,11 @@ public class BrowseScreen : MonoBehaviour
     [SerializeField] Image UserProfilePic;
     [SerializeField] TMP_Text UserName;
     [SerializeField] TMP_Text UserDesc;
+    [SerializeField] TMP_Text UserCompanies;
+    [SerializeField] TMP_Text UserNetWorth;
+    
+    [SerializeField] Transform TagContainer;
+    [SerializeField] GameObject TagPrefab;
 
     [SerializeField] GameObject MatchResultGO;
     [SerializeField] TMP_Text MatchResult;
@@ -18,7 +23,7 @@ public class BrowseScreen : MonoBehaviour
 
     public void OnEnable() {
         index = UnityEngine.Random.Range(0, LoveManager.Instance.Stonkers.Length);
-        SelectCompany(index);
+        SelectStonker(index);
         MatchResultGO.SetActive(false);
     }
 
@@ -44,17 +49,31 @@ public class BrowseScreen : MonoBehaviour
 
     public void NextStonker() {
         index = (int) Mathf.Repeat(index + 1, LoveManager.Instance.Stonkers.Length);
-        SelectCompany(index);
+        SelectStonker(index);
     }
 
-    void SelectCompany(int index) {
+    void SelectStonker(int index) {
         stonker = LoveManager.Instance.Stonkers[index];
 
-        UserName.text = stonker.Name;
+        UserName.text = $"{stonker.Name}({stonker.Age})";
         UserDesc.text = stonker.Desc;
+        UserNetWorth.text = stonker.Networth;
+        UserCompanies.text = stonker.Companies;
+
         if (!string.IsNullOrEmpty(stonker.Photo)) {
             var photo = Resources.Load<Texture2D>("Photos/" + stonker.Photo);
-            UserProfilePic.sprite = Sprite.Create(photo, new Rect(0,0,photo.width, photo.height), new Vector2(0.5f, 0.5f));
+            UserProfilePic.sprite = Sprite.Create(photo, new Rect(0, 0, photo.width, photo.height), new Vector2(0.5f, 0.5f));
+        }
+
+        foreach (Transform child in TagContainer) {
+            Destroy(child.gameObject);
+        }
+
+        if (stonker.Tags != null) {
+            foreach (var tag in stonker.Tags) {
+                var tagElement = Instantiate(TagPrefab, TagContainer).GetComponent<TagElement>();
+                tagElement.Populate(tag);
+            }
         }
     }
 }

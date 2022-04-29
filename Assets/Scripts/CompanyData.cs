@@ -13,6 +13,7 @@ public class StonkerData {
     public string Desc;
     public string Age;
     public string Networth;
+    public string Companies;
     public string Photo;
     public string DialogueMatch;
     public string DialogueNoMatch;
